@@ -103,11 +103,14 @@ body {
 .features {
   padding: 80px 0;
   background: #FFFFFF;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  gap: 30px;
   transition: var(--transition);
+}
+
+.features .container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 30px;
+  justify-items: center;
 }
 
 .feature {
@@ -115,13 +118,13 @@ body {
   border-radius: var(--radius);
   box-shadow: var(--shadow);
   padding: 40px 24px;
-  width: 300px;
-  min-height: 280px; /* stejné výšky */
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center; /* vertikální zarovnání */
+  justify-content: center;
   text-align: center;
+  min-height: 280px;
+  max-width: 320px;
   transition: var(--transition);
 }
 
@@ -133,25 +136,21 @@ body {
 .feature span {
   font-size: 2.4rem;
   display: block;
-  margin-bottom: 10px;
+  margin-bottom: 12px;
 }
 
 .feature h3 {
   font-family: 'Montserrat', sans-serif;
   color: var(--green-dark);
-  margin-bottom: 10px;
+  margin-bottom: 12px;
   font-size: 1.3rem;
 }
 
 .feature p {
-  flex-grow: 1;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0;
-  padding: 0 10px;
-  line-height: 1.4;
   color: #444;
+  line-height: 1.4;
+  margin: 0;
+  max-width: 90%;
 }
 
 
@@ -270,4 +269,5 @@ footer a:hover {
     color: var(--green);
   }
 }
+
 
