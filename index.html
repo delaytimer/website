@@ -4,35 +4,56 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Delay Timer Calculator</title>
-  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="icon" href="icon.png" type="image/png">
-</head>
-<body class="bg-gray-50 text-gray-800 font-sans">
 
-  <div class="max-w-6xl mx-auto px-6 py-16 flex flex-col md:flex-row items-center justify-between">
-    
+  <style>
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+    .fade-up { animation: fadeUp 1s ease-out forwards; }
+    .fade-in { animation: fadeIn 1.4s ease-out forwards; }
+
+    /* Pozadí s gradientem a světelnou skvrnou jako Dribbble */
+    body {
+      background: radial-gradient(circle at 70% 20%, rgba(56,189,248,0.25) 0%, rgba(15,23,42,1) 60%) no-repeat,
+                  linear-gradient(to bottom right, #0f172a, #1e293b);
+      background-size: cover;
+    }
+  </style>
+</head>
+
+<body class="text-gray-100 font-sans">
+
+  <div class="max-w-6xl mx-auto px-6 py-20 flex flex-col md:flex-row items-center justify-between min-h-screen">
+
     <!-- Left: Text -->
-    <div class="md:w-1/2 space-y-6">
-      <h1 class="text-5xl font-bold leading-tight">
-        Smart way to start <span class="text-blue-600">your appliances</span> on time
+    <div class="md:w-1/2 space-y-6 fade-up">
+      <h1 class="font-bold leading-tight text-white" style="font-size:5em;">
+        Delay Timer<br><span class="text-blue-400">Calculator</span>
       </h1>
 
-      <p class="text-lg text-gray-600">
-        <strong>Delay Timer Calculator</strong> helps you find the ideal delayed start time 
-        for your dishwasher, washing machine, or any appliance — so it finishes exactly when you want.
+      <p class="text-lg text-gray-300 max-w-md">
+        Find the perfect time to start your dishwasher, washing machine, or any timed appliance — 
+        so it finishes exactly when you want it to.
       </p>
 
-      <ul class="space-y-2 text-gray-700">
-        <li>✅ Simple, fast, and intuitive</li>
-        <li>⏱️ Set your desired finish time</li>
-        <li>📅 Works with any device timer</li>
-        <li>🌙 Perfect for night-time energy saving</li>
+      <ul class="space-y-2 text-gray-300">
+        <li>✅ Super simple and accurate</li>
+        <li>⏱️ Choose your desired finish time</li>
+        <li>⚡ Works offline, no ads</li>
+        <li>🌙 Great for night-time energy use</li>
       </ul>
 
-      <div class="pt-4">
+      <div class="pt-6">
         <a href="https://play.google.com/store/apps/details?id=com.yourappname.delaytimercalc" 
            target="_blank" 
-           class="inline-flex items-center bg-black text-white px-6 py-3 rounded-xl hover:bg-gray-800 transition">
+           class="inline-flex items-center bg-white text-black px-6 py-3 rounded-xl shadow hover:scale-105 hover:shadow-lg transition">
           <img src="https://upload.wikimedia.org/wikipedia/commons/7/78/Google_Play_Store_badge_EN.svg" 
                alt="Get it on Google Play" class="h-12" />
         </a>
@@ -40,16 +61,16 @@
     </div>
 
     <!-- Right: App Mockup -->
-    <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center">
+    <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center fade-in">
       <img src="screenshot.png" 
            alt="Delay Timer Calculator App Screenshot"
-           class="w-full max-w-md rounded-3xl shadow-xl border border-gray-200" />
+           class="w-full max-w-md rounded-3xl shadow-2xl border border-gray-700" />
     </div>
 
   </div>
 
   <!-- Footer -->
-  <footer class="text-center text-gray-400 text-sm py-8">
+  <footer class="text-center text-gray-500 text-sm py-10 border-t border-gray-700 mt-10">
     © 2025 Delay Timer Calculator — Made by Pavel Wilhelm
   </footer>
 
