@@ -114,8 +114,13 @@ body {
   background: #ffffff;
   border-radius: var(--radius);
   box-shadow: var(--shadow);
-  padding: 30px 24px;
+  padding: 40px 24px;
   width: 300px;
+  min-height: 280px; /* stejné výšky */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center; /* vertikální zarovnání */
   text-align: center;
   transition: var(--transition);
 }
@@ -137,6 +142,18 @@ body {
   margin-bottom: 10px;
   font-size: 1.3rem;
 }
+
+.feature p {
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  padding: 0 10px;
+  line-height: 1.4;
+  color: #444;
+}
+
 
 /* TESTIMONIAL */
 .testimonial {
@@ -253,3 +270,4 @@ footer a:hover {
     color: var(--green);
   }
 }
+
