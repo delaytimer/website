@@ -52,7 +52,7 @@ body {
 
 .hero-text h1 {
   font-family: 'Poppins', sans-serif;
-  font-size: 4rem;
+  font-size: 10rem;
   line-height: 1.1;
   color: #1E1E1E;
   margin-bottom: 1rem;
@@ -344,6 +344,7 @@ footer a:hover {
     box-shadow: 0 12px 32px rgba(255, 255, 255, 0.1);
   }
 }
+
 
 
 
