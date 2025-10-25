@@ -69,17 +69,19 @@
     </div>
 
   <!-- Right: App Mockup -->
-  <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center fade-in relative">
-    <div class="relative w-full max-w-md">
+  <div class="md:w-1/2 mt-12 md:mt-0 flex justify-center fade-in">
+    <div class="relative w-full max-w-md aspect-[9/19.5]">
+      <!-- Light image -->
       <img src="assets/DelayTimer_light.png"
            alt="Delay Timer Calculator App Screenshot (light)"
-           class="rounded-[2rem] w-full block dark:hidden" />
+           class="absolute inset-0 w-full h-full object-contain rounded-[2rem] dark:hidden" />
+  
+      <!-- Dark image -->
       <img src="assets/DelayTimer_dark.png"
            alt="Delay Timer Calculator App Screenshot (dark)"
-           class="rounded-[2rem] w-full hidden dark:block absolute top-0 left-0" />
+           class="absolute inset-0 w-full h-full object-contain rounded-[2rem] hidden dark:block" />
     </div>
   </div>
-
   </div>
 
   <!-- Footer -->
